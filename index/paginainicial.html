@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles0.2.css">
+    <link rel="shortcut icon" href="../img/logoecommerce.png" type="image/x-icon">
+
+
+
+    <title> Projeto Ecommerce </title>
+</head>
+
+<body class="inicial">
+
+    <header>
+        <img class="logo" src="../img/logoecommerce.png" alt="ECOMMERCE">
+        <div class="container">
+            <div class="container">
+                <h1 class="projeto">PROJETO <span>ECOMMERCE</span></h1>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="/index/cadastrar_cliente.html">Cadastro</a></li>
+                    <li><a href="/index/cadastrar_produto.html">Produtos</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="pesquisa-container">
+                <input type="text" placeholder="Buscar produto" id="termoPesquisa">
+                <button onclick="buscarProduto()">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="produtos-container">
+        <div class="produto" id="produto1">
+            <img class="img" src="../img/smartphone.jpg" alt="Smartphone TopZ">
+            <h2 class="nome-produto">Smartphone TopZ</h2>
+            <p>Smartphone de última geração</p>
+            <span>R$799.99</span>
+        </div>
+
+        <div class="produto" id="produto2">
+            <img class="img" src="../img/notebook.jpg" alt="Notebook MegaPower">
+            <h2 class="nome-produto">Notebook MegaPower</h2>
+            <p>Notebook ultraleve e potente</p>
+            <span>R$1499.99</span>
+        </div>
+
+        <div class="produto" id="produto3">
+            <img class="img" src="../img/camera.jpg" alt="Câmera ProShot">
+            <h2 class="nome-produto">Câmera ProShot</h2>
+            <p>Câmera profissional para fotografia</p>
+            <span>R$599.99</span>
+        </div>
+
+        <div class="produto" id="produto4">
+            <img class="img" src="../img/fone.jpg" alt="Fones sem Fio Xperience">
+            <h2 class="nome-produto">Fones sem Fio Xperience</h2>
+            <p>Fones de ouvido sem fio de alta qualidade</p>
+            <span>R$199.99</span>
+        </div>
+
+        <div class="produto" id="produto5">
+            <img class="img" src="../img/impressora.jpg" alt="Impressora All-in-One">
+            <h2 class="nome-produto">Impressora All-in-One</h2>
+            <p>Impressora multifuncional</p>
+            <span>R$299.99</span>
+        </div>
+
+        <div class="produto" id="produto6">
+            <img class="img" src="../img/mouse.jpg" alt="Mouse ErgoMaster">
+            <h2 class="nome-produto">Mouse ErgoMaster</h2>
+            <p>Mouse ergonômico para trabalho</p>
+            <span>R$79.99</span>
+        </div>
+
+        <div class="produto" id="produto8">
+            <img class="img" src="../img/smartwatch.jpg" alt="Smartwatch HealthGuard">
+            <h2 class="nome-produto">Smartwatch HealthGuard</h2>
+            <p>Smartwatch com monitor de saúde</p>
+            <span>R$349.99</span>
+        </div>
+
+        <div class="produto" id="produto9">
+            <img class="img" src="../img/tablet.jpg" alt="Tablet SuperVision">
+            <h2 class="nome-produto">Tablet SuperVision</h2>
+            <p>Tablet com tela retina</p>
+            <span>R$499.99</span>
+        </div>
+
+        <div class="produto" id="produto10">
+            <img class="img" src="../img/tecladogamer.jpg" alt="Teclado Gamer Pro">
+            <h2 class="nome-produto">Teclado Gamer Pro</h2>
+            <p>Teclado mecânico para gamers</p>
+            <span>R$199.99</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Davyd Fontoura Camargo - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        function buscarProduto() {
+            var termoPesquisa = document.getElementById('termoPesquisa').value.toLowerCase();
+
+            if (termoPesquisa === "") {
+                var produtos = document.querySelectorAll('.produto');
+                produtos.forEach(produto => produto.style.display = "block");
+            } else {
+                var produtos = document.querySelectorAll('.produto');
+                produtos.forEach(produto => {
+                    var nomeProduto = produto.querySelector('.nome-produto').textContent.toLowerCase();
+                    var idProduto = produto.id.toLowerCase();
+                    if (nomeProduto.includes(termoPesquisa) || idProduto.includes(termoPesquisa)) {
+                        produto.style.display = "block";
+                    } else {
+                        produto.style.display = "none";
+                    }
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>

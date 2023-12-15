@@ -1,0 +1,117 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: rgb(228, 226, 223);
+    color: #ffffff;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(15, 15, 15, 0.5);
+    display: flex;
+}
+header>div{
+    display: flex;
+}
+.box {
+    width: 80%;
+    max-width: 600px;
+    margin: 10% auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+
+}
+.container {
+    width: 80%;
+    margin: 3% auto;
+}
+.login {
+    width: 80%;
+    max-width: 600px;
+    margin: 15% auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+}
+.btlogin{
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="sex"],
+input[type="password"],
+input[type="cep"],
+input[type="cpf"],
+input[type="number"],
+input[type="item"],
+input[type="value"]
+ {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="submit"],
+input[type="reset"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+.iJoCRZ {
+    font-size: 16px;
+    color: rgb(252, 13, 27);
+    margin-right: 2px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+p{
+    text-align: center;
+}
+img{
+    display: flex;
+    margin-left: 100px;
+}
+.projeto{
+    color: #00253ad8;
+}
+.projeto span{
+    color: #006aa8ec;
+}
+

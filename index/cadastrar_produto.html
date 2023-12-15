@@ -1,0 +1,133 @@
+<!DOCTYPE cshtml>
+<html>
+
+<head>
+    <title>Formulário</title>
+    <link rel="stylesheet"  href="../css/styles.css" />
+    <link rel="shortcut icon" href="/img/logoecommerce.png" type="image/x-icon">
+
+</head>
+
+<body>
+    
+    <header>
+        <a href="../index/paginainicial.html"><img src="../img/logoecommerce.png" width="150" height="150" alt=""> </a>
+                   <div class="container">
+            <h1 class="projeto">PROJETO <span>ECOMMERCE</span></h1>
+        </div>
+    </header>
+
+
+
+    <form id="meuFormulario" action="~/site/login.html" method="post" enctype="multipart/form-data">
+        <div class="box">
+            <div>
+                <h1>Cadastro de produto</h1>
+
+                <p><span class="sc-kMGnbm iJoCRZ">*</span> campos obrigatórios </p>
+
+                <label for="produtos"><span class="sc-kMGnbm iJoCRZ">*</span>Nome:<br></label> <input type="item"
+                    id="produtos" name="produtos" maxlength="30" placeholder="Digite o nome do produto"
+                    onfocus="changePlaceholder(this, 'Ex: Caderno')"
+                    onblur="changePlaceholder(this, 'Digite seu produto')" /> <!-- Cadastro OK -->
+
+                <br><br>
+
+                <label for="quantidade"><span class="sc-kMGnbm iJoCRZ">*</span>Quantidade:<br></label> <input
+                    type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade de produtos"
+                    onfocus="changePlaceholder(this, 'Ex: 5')"
+                    onblur="changePlaceholder(this, 'Digite a quantidade de produtos')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="categoria"><span class="sc-kMGnbm iJoCRZ">*</span>Categoria:<br></label> <input type="text"
+                    id="categoria" name="categoria" placeholder="Digite a categoria do produto"
+                    onfocus="changePlaceholder(this, 'Ex: Eletrodomésticos')"
+                    onblur="changePlaceholder(this, 'Digite a categoria do produto')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="valor"><span class="sc-kMGnbm iJoCRZ">*</span>Valor do Produto (R$):<br></label>
+                <input type="text" id="valor" name="valor" placeholder="R$ 0,00" onclick="formatarValor(this)"
+                    title="Informe um valor válido. Ex: R$ 10.50" onfocus="changePlaceholder(this, 'Ex: R$ 10,50')"
+                    onblur="changePlaceholder(this, 'R$ 0,00')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="peso">Peso (kg):<br></label> <input type="text"
+                    id="peso" name="peso" placeholder="Digite o peso do produto" oninput="formatarPeso(this)"
+                    onfocus="changePlaceholder(this, 'Ex: 5kg')"
+                    onblur="changePlaceholder(this, 'Digite o peso do produto')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="altura">Altura (cm):<br></label> <input type="text"
+                    id="altura" name="altura" placeholder="Digite a altura do produto"
+                    onfocus="changePlaceholder(this, 'Ex: 5 cm')"
+                    onblur="changePlaceholder(this, 'Digite a altura do produto')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="largura">Largura (cm):<br></label> <input
+                    type="text" id="largura" name="largura" placeholder="Digite a largura do produto"
+                    onfocus="changePlaceholder(this, 'Ex: 10 cm')"
+                    onblur="changePlaceholder(this, 'Digite a largura do produto')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="profundidade">Profundidade (cm):<br></label> <input
+                    type="text" id="profundidade" name="profundidade" placeholder="Digite a profundidade do produto"
+                    onfocus="changePlaceholder(this, 'Ex: 3 cm')"
+                    onblur="changePlaceholder(this, 'Digite a profundidade do produto')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="descricao">Descrição:<br></label> <input type="text" id="descricao" name="descricao"
+                    placeholder=" Descrição do produto" onfocus="changePlaceholder(this, 'Ex: Esse produto é amarelo.')"
+                    onblur="changePlaceholder(this, 'Descrição do produto')" /> <!-- Cadastro OK -->
+                <br><br>
+
+                <label for="foto">Foto:<br></label> <input type="file" id="foto" name="foto" accept=".jpg" />
+                <br><br> <!-- Cadastro OK -->
+
+                <input type="submit" value="Cadastrar">
+                <input type="reset" value="Limpar">
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+    <script>
+
+        // Função para alterar dinamicamente o texto do placeholder
+        function changePlaceholder(input, newText) {
+            input.placeholder = newText;
+        }
+
+        // Função incompleta para inserir o R$ (tenho que remover o R$ antes de eniviar pro banco de dados)
+        function formatarValor(input) {
+            let valor = input.value.replace(/[^\d,] /g, '');
+            let valoralterado = valor.replace('R$', '');
+            input.value = "R$" + valoralterado;
+
+        }
+
+        function formatarNumero(numero) {
+            const valorNumerico = (numero.replace(',', '.'));
+
+            if (!isNaN(valorNumerico)) {
+                return
+                valorNumerico.toLocaleString('pt-br')
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

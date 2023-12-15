@@ -1,0 +1,125 @@
+<!DOCTYPE cshtml>
+<html>
+
+<head>
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="shortcut icon" href="/img/logoecommerce.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="../index/paginainicial.html"><img src="../img/logoecommerce.png" width="150" height="150" alt=""> </a>
+           
+        <div class="container">
+            <h1 class="projeto">PROJETO <span>ECOMMERCE</span></h1>
+        </div>
+    </header>
+    
+
+    <form id="meuFormulario" action="~/site/login.html" method="post" enctype="multipart/form-data" > 
+        <div class="box">
+            <div>
+                
+                <h1>Cadastro de usuário</h1>
+
+                <p><span class="sc-kMGnbm iJoCRZ">*</span> campos obrigatórios </p>
+
+                <label for="cpf"><span class="sc-kMGnbm iJoCRZ">*</span>CPF:<br></label> <input type="cpf" id="cpf" name="cpf" maxlength="14"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite seu CPF"  title="CPF inválido"
+                    onfocus="changePlaceholder(this, 'Ex: 998.651.720-62')"
+                    onblur="changePlaceholder(this, 'Digite seu CPF')" /><br><br>
+
+                <label for="nome"><span class="sc-kMGnbm iJoCRZ">*</span>Nome:<br></label> <input type="text" id="nome" name="nome"
+                    placeholder="Digite seu primeiro nome" onfocus="changePlaceholder(this, 'Ex: Daniel')"
+                    onblur="changePlaceholder(this, 'Digite seu primeiro nome')" />    <br><br>
+
+                <label for="sobrenome"><span class="sc-kMGnbm iJoCRZ">*</span>Sobrenome:<br></label> <input type="text" id="sobrenome" name="sobrenome"
+                    placeholder="Digite seu sobrenome" onfocus="changePlaceholder(this, 'Ex: Oliveira Santos')"
+                    onblur="changePlaceholder(this, 'Digite seu sobrenome')" />    <br><br>
+
+                <label for="senha"><span class="sc-kMGnbm iJoCRZ">*</span>Senha:</label>
+
+                <input type="password" id="senha" name="senha" minlength="6" maxlength="6"
+                    placeholder="Digite sua senha" oninput="validarSenha(this)">
+                <span id="avisoSenha" style="color: red;"></span>    <br><br>
+          
+
+                <label for="email"><span class="sc-kMGnbm iJoCRZ">*</span>Endereço de email:</label> <input type="email" id="email" name="email"
+                    placeholder="Digite seu e-mail" placeholder="Digite seu e-mail"
+                    onfocus="changePlaceholder(this, 'Ex: kermit3653@uorak.com ')"
+                    onblur="changePlaceholder(this, 'Digite seu e-mail')"><br><br>
+
+                <label for="genero">Gênero:</label>
+                <input type="radio" name="sexo" value="masculino" /> Masculino<br>
+                <input type="radio" name="sexo" value="feminino" /> Feminino<br>
+                <input type="radio" name="sexo" value="none" /> Outros
+                <br><br>
+
+                <label for="endereco"><span class="sc-kMGnbm iJoCRZ">*</span>Endereço:</label> <input type="text" id="endereco" name="endereco"
+                    placeholder="Digite seu endereço" onfocus="changePlaceholder(this, 'Ex: Rua Cohaspa')"
+                    onblur="changePlaceholder(this, 'Digite seu endereço')"><br><br>
+
+
+                <label for="bairro"><span class="sc-kMGnbm iJoCRZ">*</span>Bairro:</label> <input type="text" id="bairro" name="bairro"
+                    placeholder="Digite seu endereço" onfocus="changePlaceholder(this, 'Ex: Rubem berta')"
+                    onblur="changePlaceholder(this, 'Digite seu endereço')"><br><br>
+
+                <label for="cep"><span class="sc-kMGnbm iJoCRZ">*</span>CEP:</label> <input type="cep" id="cep" name="cep" maxlength="9"
+                    placeholder="Digite seu CEP" onfocus="changePlaceholder(this, 'Ex: 67020-452')"
+                    onblur="changePlaceholder(this, 'Digite seu CEP')">
+                <br><br>
+
+
+                <label for="telefone"><span class="sc-kMGnbm iJoCRZ">*</span>Telefone:</label><input type="tel" id="telefone" name="telefone" maxlength="16"
+                 placeholder="Digite seu telefone"  title="Telefone inválido" oninput="formatarTelefone(this)" 
+                    onfocus="changePlaceholder(this, 'Ex:+5551986664639')"
+                    onblur="changePlaceholder(this, 'Digite seu telefone')">
+                <br><br>
+
+
+                <label for="numero_endereco"><span class="sc-kMGnbm iJoCRZ">*</span>Número de endereço:</label><input type="number" id="numero_endereco"
+                    name="numero_endereco" placeholder="Digite o número de seu endereço"
+                    onfocus="changePlaceholder(this, 'Ex: 250')"
+                    onblur="changePlaceholder(this, 'Digite o número de seu endereço')"><br><br>
+
+
+
+                <input type="submit" value="Cadastrar">  
+                <input type="reset" value="Limpar">
+            </div>
+        </div>
+    </form>
+
+
+    <script>
+
+        // Função para alterar dinamicamente o texto do placeholder
+        function changePlaceholder(input, newText) {
+            input.placeholder = newText;
+        }
+
+
+        function validarSenha(input) {
+            var avisoSenha = document.getElementById("avisoSenha");
+            var senha = input.value;
+
+            // Verifica se a senha tem exatamente 6 caracteres
+            if (senha.length === 6) {
+                avisoSenha.innerHTML = ""; // Limpa a mensagem de aviso se estiver correta
+            } else {
+                avisoSenha.innerHTML = "A senha deve ter 6 caracteres.";
+            }
+        }
+
+  
+    </script>
+
+
+
+
+</body>
+
+</html>

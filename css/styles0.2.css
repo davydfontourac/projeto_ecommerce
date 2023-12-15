@@ -1,0 +1,144 @@
+.inicial {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    text-align: center;
+    font-size: 1.4em;
+    position: relative;
+    left: au;
+}
+
+.nav-bar {
+    margin: 30px auto;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 0.9em;
+}
+
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav,
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    color: #000;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+footer {
+    position: relative;
+    top: 550px;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    text-align: justify;
+    font-size: 0.5em;
+}
+
+.projeto {
+    color: #00253ad8;
+}
+
+.projeto span {
+    color: #006aa8ec;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 8%;
+}
+
+.pesquisa-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pesquisa-container input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.pesquisa-container button {
+    padding: 10px;
+    background-color: #006aa8ec;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.produtos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.produto {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+}
+
+.produto img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.produto h2 {
+    margin: 10px 0;
+}
+
+.produto span {
+    font-weight: bold;
+    color: #006aa8ec;
+}

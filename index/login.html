@@ -1,0 +1,56 @@
+<!DOCTYPE cshtml>
+<html>
+
+<head>
+    <title>Formulário</title>
+    <link rel="stylesheet"  href="../css/styles.css"/>
+    <link rel="shortcut icon" href="/img/logoecommerce.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <form id="meuFormulario" action="~/site/Cadastrar_cliente.html" method="post" enctype="multipart/form-data">
+
+
+        <header>
+
+            <a href="../index/paginainicial.html"><img src="../img/logoecommerce.png" width="150" height="150" alt=""> </a>
+
+            <div class="container">
+                <h1 class="projeto">PROJETO <span>ECOMMERCE</span></h1>
+            </div>
+        </header>
+
+
+        <div class="login">
+            <div>
+                <h1>Login do cliente</h1>
+
+                <p><span class="sc-kMGnbm iJoCRZ">*</span> campos obrigatórios </p>
+
+                <label for="email"><span class="sc-kMGnbm iJoCRZ">*</span>Endereço de email:</label> <input type="email"
+                    id="email" name="email" placeholder="Digite seu e-mail" placeholder="Digite seu e-mail"
+                    onfocus="changePlaceholder(this, 'Ex: kermit3653@uorak.com ')"
+                    onblur="changePlaceholder(this, 'Digite seu e-mail')"><br><br>
+
+                <label for="senha"><span class="sc-kMGnbm iJoCRZ">*</span>Senha:<br></label>
+
+                <input type="password" id="senha" name="senha" minlength="6" maxlength="6"
+                    placeholder="Digite sua senha" oninput="validarSenha(this)">
+                <span id="avisoSenha" style="color: red;"></span><br><br>
+
+                <p>Não tem cadastro?<a href="cadastrar_cliente.html">cadastre-se</a></p>
+
+                <div class="btlogin"><input type="submit" value="Login"></div>
+
+            </div>
+        </div>
+    </form>
+
+    </div>
+
+
+</body>
+
+</html>
